@@ -6,11 +6,12 @@ import (
 )
 
 func main() {
+	var stock []byte
 	word := "joseph"
 	if piscine.Verif_taille_osArgs() {
 		if piscine.Verif_taille_string() {
 			if piscine.Verif_letter() {
-				if piscine.lettre_utiliser() {
+				if piscine.Lettre_utiliser(&stock) {
 					if piscine.Verif_letter_in_word(word) {
 						fmt.Println("La lettre donnée se trouve dans le mot")
 					} else {
