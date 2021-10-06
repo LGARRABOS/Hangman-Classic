@@ -13,7 +13,6 @@ func Choice() string {
 		choice = choice + scanner.Text()
 		break
   	}
-	fmt.Println(choice)
 	return choice
 	
 }
