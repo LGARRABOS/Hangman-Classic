@@ -2,19 +2,30 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"piscine"
 )
 
 func main() {
 	word := "joseph"
-	if os.Args[1][0] >= 60 && os.Args[1][0] <= 122 {
-		if piscine.Verif(word) {
-			fmt.Println("True")
+	if piscine.Verif_taille_osArgs() {
+		if piscine.Verif_taille_string() {
+			if piscine.Verif_letter() {
+				if piscine.lettre_utiliser() {
+					if piscine.Verif_letter_in_word(word) {
+						fmt.Println("La lettre donnée se trouve dans le mot")
+					} else {
+						fmt.Println("La lettre donnée ne se trouve pas dans le mot")
+					}
+				} else {
+					fmt.Println("La lettre donnée à déja été proposer")
+				}
+			} else {
+				fmt.Println("Votre arguments ne peux contenir qu'une lettre minuscule")
+			}
 		} else {
-			fmt.Println("False")
+			fmt.Println("Votre arguments ne doit contenir qu'un seul carractére")
 		}
 	} else {
-		fmt.Println("Le carractére rentrée n'est pas accepter")
+		fmt.Println("Vous ne pouvez envoyer qu'un seul argument")
 	}
 }
