@@ -1,44 +1,35 @@
 package piscine
 
-import "os"
-
-func Verif_letter_in_word(word string) bool {
+func Verif_letter_in_word(word string, letter string) bool {
 	for i := 0; i < len(word); i++ {
-		if word[i] == os.Args[1][0] {
+		if word[i] == letter[0] {
 			return true
 		}
 	}
 	return false
 }
 
-func Verif_letter() bool {
-	if os.Args[1][0] >= 60 && os.Args[1][0] <= 122 {
+func Verif_letter(letter string) bool {
+	if letter[0] >= 60 && letter[0] <= 122 {
 		return true
 	}
 	return false
 }
 
-func Verif_taille_osArgs() bool {
-	if len(os.Args) == 2 {
+func Verif_taille(letter string) bool {
+	if len(letter) == 1 {
 		return true
 	}
 	return false
 }
 
-func Verif_taille_string() bool {
-	if len(os.Args[1]) == 1 {
-		return true
-	}
-	return false
-}
-
-func Lettre_utiliser(use *[]byte) bool {
+func Lettre_utiliser(use *[]byte, letter string) bool {
 	a := *use
 	for i := 0; i < len(*use); i++ {
-		if a[i] == os.Args[1][0] {
+		if a[i] == letter[0] {
 			return false
 		}
 	}
-	*use = append(*use, os.Args[1][0])
+	*use = append(*use, letter[0])
 	return true
 }
