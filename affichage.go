@@ -4,9 +4,9 @@ import (
 	"fmt"
 )
 
-func PrintHangmanError(error bool , lose int) {
-	fmt.Println("Not present in the word, ", lose ,"attempts remaining")
-	if lose == 9 {
+func PrintHangmanError(Letterincorect bool , nbbeforelose int) {
+	fmt.Println("Not present in the word, ", nbbeforelose ,"attempts remaining")
+	if nbbeforelose == 9 {
 		fmt.Println()
 		fmt.Println()
 		fmt.Println()
@@ -14,7 +14,8 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println()
 		fmt.Println()
 		fmt.Println("=========")
-	} else if lose == 8 {
+
+	} else if nbbeforelose == 8 {
 		fmt.Println()
 		fmt.Println("      |")
 		fmt.Println("      |")
@@ -22,7 +23,8 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("      |")
 		fmt.Println("=========")
-	} else if lose == 7 {
+
+	} else if nbbeforelose == 7 {
 		fmt.Println("  +---+")
 		fmt.Println("      |")
 		fmt.Println("      |")
@@ -30,7 +32,8 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("      |")
 		fmt.Println("=========")
-	} else if lose == 6 {
+
+	} else if nbbeforelose == 6 {
 		fmt.Println("  +---+")
 		fmt.Println("  |   |")
 		fmt.Println("      |")
@@ -38,7 +41,8 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("      |")
 		fmt.Println("=========")
-	} else if lose == 5 {
+
+	} else if nbbeforelose == 5 {
 		fmt.Println("  +---+")
 		fmt.Println("  |   |")
 		fmt.Println("  o   |")
@@ -47,7 +51,7 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("=========")
 
-	} else if lose == 4 {
+	} else if nbbeforelose == 4 {
 		fmt.Println("  +---+")
 		fmt.Println("  |   |")
 		fmt.Println("  o   |")
@@ -55,7 +59,7 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("      |")
 		fmt.Println("=========")
-	} else if lose == 3 {
+	} else if nbbeforelose == 3 {
 		fmt.Println("  +---+")
 		fmt.Println("  |   |")
 		fmt.Println("  o   |")
@@ -64,7 +68,7 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("=========")
 		
-	} else if lose == 2 {
+	} else if nbbeforelose == 2 {
 		fmt.Println("  +---+")
 		fmt.Println("  |   |")
 		fmt.Println("  o   |")
@@ -73,7 +77,7 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("=========")
 		
-	} else if lose == 1 {
+	} else if nbbeforelose == 1 {
 		fmt.Println("  +---+")
 		fmt.Println("  |   |")
 		fmt.Println("  o   |")
@@ -82,7 +86,7 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println("      |")
 		fmt.Println("=========")
 		
-	} else if lose == 0 {
+	} else if nbbeforelose == 0 {
 		fmt.Println("  +---+")
 		fmt.Println("  |   |")
 		fmt.Println("  o   |")
