@@ -1,11 +1,12 @@
 package piscine
 
-import (
-	"fmt"
-)
+import "fmt"
+
 
 func PrintHangmanError(Letterincorect bool , nbbeforelose int) {
+
 	fmt.Println("Not present in the word, ", nbbeforelose ,"attempts remaining")
+	
 	if nbbeforelose == 9 {
 		fmt.Println()
 		fmt.Println()
