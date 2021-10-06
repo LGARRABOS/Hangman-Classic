@@ -5,6 +5,7 @@ import (
 )
 
 func PrintHangmanError(error bool , lose int) {
+	fmt.Println("Not present in the word, ", lose ,"attempts remaining")
 	if lose == 9 {
 		fmt.Println()
 		fmt.Println()
@@ -89,5 +90,6 @@ func PrintHangmanError(error bool , lose int) {
 		fmt.Println(" / \\  |")
 		fmt.Println("      |")
 		fmt.Println("=========")
+		fmt.Println("The poor José is dead because of you.")
 	}
 }
