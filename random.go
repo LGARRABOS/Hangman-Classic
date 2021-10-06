@@ -24,3 +24,8 @@ func RandomWord() string {
 	return word
 	
 }
+
+func LetterRandom(word) string {
+	var letter string
+	letter = word[rand.Intn(len(word))]
+}
