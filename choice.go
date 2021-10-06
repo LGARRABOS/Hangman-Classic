@@ -1,15 +1,19 @@
-package main
+package piscine
 
 import (
 	"bufio"
 	"os"
 	"fmt"
 )
-func main() {
+func Choice() string {
 	scanner := bufio.NewScanner(os.Stdin)
+	var choice string
+	fmt.Printf("Choose: ")
 	for scanner.Scan() {
-		fmt.Println(scanner.Text())
+		choice = choice + scanner.Text()
 		break
   	}
+	fmt.Println(choice)
+	return choice
 	
 }

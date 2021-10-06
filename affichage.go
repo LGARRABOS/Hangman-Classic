@@ -3,7 +3,7 @@ package piscine
 import "fmt"
 
 
-func PrintHangmanError(Letterincorect bool , nbbeforelose int) {
+func PrintHangmanError(nbbeforelose int) {
 
 	fmt.Println("Not present in the word, ", nbbeforelose ,"attempts remaining")
 	
