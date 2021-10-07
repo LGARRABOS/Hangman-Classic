@@ -16,7 +16,9 @@ func AllVerif(choice string, stock *[]byte, word string) bool{
 			fmt.Println("Votre arguments ne peux contenir qu'une lettre minuscule")
 		}
 	} else {
-		fmt.Println("Votre arguments contient trop de lettre ou pas assez")
+		if len(word) != len(choice) {
+			fmt.Println("Votre arguments contient trop de lettre ou pas assez")
+		}
 	}
 	return false
 }

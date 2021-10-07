@@ -17,7 +17,7 @@ func Verif_letter(choice string) bool {
 }
 
 func Verif_taille(choice string, word string) bool {
-	if len(choice) == 1 && len(choice) == len(word){
+	if len(choice) == 1 {
 		return true
 	}
 	return false
