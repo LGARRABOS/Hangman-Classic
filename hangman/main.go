@@ -14,7 +14,6 @@ func main() {
 	fmt.Println("Good luck, you have", attempts, " attempts.")
 	if len(os.Args) == 2 {
 		word := piscine.RandomWord()
-		fmt.Println(word)
 		tabunderscore := make([]rune, len(word))
 		baseletter := piscine.LetterRandom(word)
 		tabunderscore = piscine.Affichagefind(word, baseletter, tabunderscore)
