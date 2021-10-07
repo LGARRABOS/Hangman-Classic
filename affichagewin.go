@@ -15,7 +15,6 @@ func Affichagefind(word string, letterchoose string, tabunderscore []rune) []run
 		}
 	}
 	return tabunderscore
-
 }
 
 

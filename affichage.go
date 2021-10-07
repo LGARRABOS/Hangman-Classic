@@ -1,100 +1,66 @@
 package piscine
 
-import "fmt"
+import (
+    "fmt"
+    "os"
+	"bufio"
+	"log"
+)
 
 
 func PrintHangmanError(nbbeforelose int) {
+    var wordtab []string
 
-	fmt.Println("Not present in the word, ", nbbeforelose ,"attempts remaining")
-	
-	if nbbeforelose == 9 {
-		fmt.Println()
-		fmt.Println()
-		fmt.Println()
-		fmt.Println()
-		fmt.Println()
-		fmt.Println()
-		fmt.Println("=========")
-
-	} else if nbbeforelose == 8 {
-		fmt.Println()
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-
-	} else if nbbeforelose == 7 {
-		fmt.Println("  +---+")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-
-	} else if nbbeforelose == 6 {
-		fmt.Println("  +---+")
-		fmt.Println("  |   |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-
-	} else if nbbeforelose == 5 {
-		fmt.Println("  +---+")
-		fmt.Println("  |   |")
-		fmt.Println("  o   |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-
-	} else if nbbeforelose == 4 {
-		fmt.Println("  +---+")
-		fmt.Println("  |   |")
-		fmt.Println("  o   |")
-		fmt.Println("  |   |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-	} else if nbbeforelose == 3 {
-		fmt.Println("  +---+")
-		fmt.Println("  |   |")
-		fmt.Println("  o   |")
-		fmt.Println(" /|   |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-		
-	} else if nbbeforelose == 2 {
-		fmt.Println("  +---+")
-		fmt.Println("  |   |")
-		fmt.Println("  o   |")
-		fmt.Println(" /|\\  |")
-		fmt.Println("      |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-		
-	} else if nbbeforelose == 1 {
-		fmt.Println("  +---+")
-		fmt.Println("  |   |")
-		fmt.Println("  o   |")
-		fmt.Println(" /|\\  |")
-		fmt.Println(" /    |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-		
-	} else if nbbeforelose == 0 {
-		fmt.Println("  +---+")
-		fmt.Println("  |   |")
-		fmt.Println("  o   |")
-		fmt.Println(" /|\\  |")
-		fmt.Println(" / \\  |")
-		fmt.Println("      |")
-		fmt.Println("=========")
-		fmt.Println("The poor José is dead because of you.")
-	}
+    fmt.Println("Not present in the word, ", nbbeforelose ,"attempts remaining")
+    f, err := os.Open("hangman.txt")
+    if err != nil {
+        log.Fatal(err)
+    }
+	defer f.Close()
+	scanner := bufio.NewScanner(f)
+	for scanner.Scan() {
+		wordtab = append(wordtab, scanner.Text())
+    }
+    if nbbeforelose == 9 {
+        for i := 0; i < 7; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 8 {
+        for i := 7; i < 15; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 7 {
+        for i := 15; i < 23; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 6 {
+        for i := 23; i < 31; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 5 {
+        for i := 31; i < 39; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 4 {
+        for i := 39; i < 47; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 3 {
+        for i := 47; i < 55; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 2 {
+        for i := 55; i < 63; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 1 {
+        for i := 63; i < 71; i++ {
+            fmt.Println(wordtab[i])
+        }
+    } else if nbbeforelose == 0 {
+        for i := 71; i < 78; i++ {
+            fmt.Println(wordtab[i])
+        }
+        fmt.Println("The poor José is dead because of you.")
+    }
 }

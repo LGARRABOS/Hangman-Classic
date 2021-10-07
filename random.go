@@ -11,7 +11,7 @@ func RandomWord() string {
 	rand.Seed(time.Now().UnixNano())
 	var wordtab []string
 	var word string
-	f, err := os.Open("words.txt")
+	f, err := os.Open(os.Args[1])
     if err != nil {
         log.Fatal(err)
     }
