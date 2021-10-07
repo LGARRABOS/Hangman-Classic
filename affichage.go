@@ -8,10 +8,12 @@ import (
 )
 
 
-func PrintHangmanError(nbbeforelose int) {
+func PrintHangmanError(nbbeforelose int, lattempts *int) {
     var wordtab []string
-
-    fmt.Println("Not present in the word, ", nbbeforelose ,"attempts remaining")
+    if *lattempts != nbbeforelose {
+      fmt.Println("Not present in the word, ", nbbeforelose ,"attempts remaining")
+      *lattempts = nbbeforelose
+    }
     f, err := os.Open("hangman.txt")
     if err != nil {
         log.Fatal(err)

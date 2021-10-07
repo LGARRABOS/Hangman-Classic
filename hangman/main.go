@@ -7,6 +7,7 @@ import (
 
 func main() {
 	attempts := 10
+	lattempts := 10
 	var choice string
 	c := 0
 	var stock []byte
@@ -16,6 +17,7 @@ func main() {
 	baseletter := piscine.LetterRandom(word)
 	tabunderscore = piscine.Affichagefind(word, baseletter, tabunderscore)
 	piscine.LetterType(tabunderscore)
+	piscine.PrintHangmanError(attempts, &lattempts)
 	for attempts > 0 {
 		choice = piscine.Choice()
 		c = 0
@@ -23,6 +25,7 @@ func main() {
 			if piscine.Verif_letter_in_word(word, choice) {
 				tabunderscore = piscine.Affichagefind(word, choice, tabunderscore)
 				piscine.LetterType(tabunderscore)
+				piscine.PrintHangmanError(attempts, &lattempts)
 				for i := 0; i < len(word); i++ {
 					if rune(word[i]) == tabunderscore[i] {
 						c++
@@ -30,7 +33,8 @@ func main() {
 				}
 			} else {
 				attempts--
-				piscine.PrintHangmanError(attempts)
+				piscine.LetterType(tabunderscore)
+				piscine.PrintHangmanError(attempts, &lattempts)
 			}
 			if c == len(word) {
 			 fmt.Println("Congrats !")
@@ -42,12 +46,14 @@ func main() {
 					tabunderscore[i] = rune(word[i])
 				}
 				piscine.LetterType(tabunderscore)
+				piscine.PrintHangmanError(attempts, &lattempts)
 				fmt.Println("\n")
 				fmt.Println("Congrats !")
 				break
 			} else {
 				attempts -= 2
-				piscine.PrintHangmanError(attempts)
+				piscine.LetterType(tabunderscore)
+				piscine.PrintHangmanError(attempts, &lattempts)
 			}
 		}
 	}
