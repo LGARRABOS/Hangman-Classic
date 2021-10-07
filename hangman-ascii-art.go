@@ -11,6 +11,11 @@ func Troue() {
 	fmt.Println("|______|")
 }
 
+func Point() {
+	fmt.Println(" _  ")
+	fmt.Println("(_) ")
+}
+
 func Ascii_art_maj(letter string) {
 	if letter == "a" {
 		fmt.Println("    /\\")

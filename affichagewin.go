@@ -16,7 +16,7 @@ func Affichagefind(word string, letterchoose string, tabunderscore []rune) []run
 		} else {
 			tabunderscore[i] = '_'
 		}
-		txtletter = txtletter + string(tabunderscore[i])
+		txtletter = txtletter + string(tabunderscore[i]) + " "
 	}
 	fmt.Println(txtletter)
 	return tabunderscore

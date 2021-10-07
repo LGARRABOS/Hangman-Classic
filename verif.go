@@ -36,10 +36,8 @@ func Lettre_utiliser(use *[]byte, choice string) bool {
 
 func Complet_word(word string, choice string) bool {
 	for i := 0; i < len(word); i++ {
-		for j := 0; j < len(choice); j++ {
-			if word[i] != word[j] {
-				return false
-			}
+		if word[i] != choice[i] {
+			return false
 		}
 	}
 	return true

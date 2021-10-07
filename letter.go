@@ -4,12 +4,10 @@ import (
 	"fmt"
 )
 
-func AllVerif(choice string) bool{
-	var stock []byte
-
+func AllVerif(choice string, stock *[]byte) bool{
 	if Verif_taille(choice) {
 		if Verif_letter(choice) {
-			if Lettre_utiliser(&stock, choice) {
+			if Lettre_utiliser(&*stock, choice) {
 				return true
 			} else {
 				fmt.Println("La lettre donnée à déja été proposer")
@@ -18,7 +16,7 @@ func AllVerif(choice string) bool{
 			fmt.Println("Votre arguments ne peux contenir qu'une lettre minuscule")
 		}
 	} else {
-		fmt.Println("Vous ne pouvez envoyer qu'un seul argument")
+		fmt.Println("Votre arguments contient trop de lettre ou pas assé")
 	}
 	return false
 }
