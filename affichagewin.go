@@ -1,9 +1,6 @@
 package piscine
 
-import "fmt"
-
 func Affichagefind(word string, letterchoose string, tabunderscore []rune) []rune {
-	var txtletter string
 	if  tabunderscore[0] == 0 {
 		for i := 0; i < len(tabunderscore); i++ {
 			tabunderscore[i] = '_'
@@ -16,9 +13,7 @@ func Affichagefind(word string, letterchoose string, tabunderscore []rune) []run
 		} else {
 			tabunderscore[i] = '_'
 		}
-		txtletter = txtletter + string(tabunderscore[i]) + " "
 	}
-	fmt.Println(txtletter)
 	return tabunderscore
 
 }

@@ -1,3 +1,7 @@
+package piscine
+
+import "fmt"
+
 func Ascii_art_maj(letter string) {
 	if letter == "a" {
 		fmt.Println("    /\\")
