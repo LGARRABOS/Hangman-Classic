@@ -33,3 +33,14 @@ func Lettre_utiliser(use *[]byte, choice string) bool {
 	*use = append(*use, choice[0])
 	return true
 }
+
+func Complet_word(word string, choice string) bool {
+	for i := 0; i < len(word); i++ {
+		for j := 0; j < len(choice); j++ {
+			if word[i] != word[j] {
+				return false
+			}
+		}
+	}
+	return true
+}
