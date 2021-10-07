@@ -14,15 +14,18 @@ func main() {
 	fmt.Println("Good luck, you have", attempts, " attempts.")
 	if len(os.Args) == 2 {
 		word := piscine.RandomWord()
+		fmt.Println(word)
 		tabunderscore := make([]rune, len(word))
 		baseletter := piscine.LetterRandom(word)
 		tabunderscore = piscine.Affichagefind(word, baseletter, tabunderscore)
+		piscine.Ascii_art_min(tabunderscore)
 		for attempts > 0 {
 			choice = piscine.Choice()
 			c = 0
-			if piscine.AllVerif(choice, &stock) {
+			if piscine.AllVerif(choice, &stock, word) {
 				if piscine.Verif_letter_in_word(word, choice) {
 					tabunderscore = piscine.Affichagefind(word, choice, tabunderscore)
+					piscine.Ascii_art_min(tabunderscore)
 					for i := 0; i < len(word); i++ {
 						if rune(word[i]) == tabunderscore[i] {
 							c++
@@ -39,9 +42,9 @@ func main() {
 			} else if len(choice) == len(word) {
 				if piscine.Complet_word(word, choice) {
 					for i := 0; i < len(word); i++ {
-						fmt.Printf(string(word[i]))
-						fmt.Printf(" ")
+						tabunderscore[i] = rune(word[i])
 					}
+					piscine.Ascii_art_min(tabunderscore)
 					fmt.Println("\n")
 					fmt.Println("Congrats !")
 					break
