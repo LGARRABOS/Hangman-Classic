@@ -182,3 +182,16 @@ func Ascii_art_maj(letter string) {
 		fmt.Println("/_____| ")
 	}
 }
+func underscore() {
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+	fmt.Println(" ______ ")
+	fmt.Println("|______|")
+}
+
+func Point() {
+	fmt.Println(" _  ")
+	fmt.Println("(_) ")
+}
