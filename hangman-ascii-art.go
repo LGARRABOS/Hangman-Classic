@@ -197,186 +197,63 @@ func Ascii_art_maj(letter string) {
 }
 
 func Ascii_art_min(letter string) {
-	if letter == "a" {
-		fmt.Println("  __ _  ")
-		fmt.Println(" / _` | ")
-		fmt.Println("| (_| | ")
-		fmt.Println(" \\__,_| ")
-	} else if letter == "b" {
-		fmt.Println(" _      ")
-		fmt.Println("| |     ")
-		fmt.Println("| |__   ")
-		fmt.Println("| '_ \\  ")
-		fmt.Println("| |_) | ")
-		fmt.Println("|_.__/  ")
-	} else if letter == "c" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println("  ___  ")
-		fmt.Println(" / __| ")
-		fmt.Println("| (__  ")
-		fmt.Println(" \\___| ")
-	} else if letter == "d" {
-		fmt.Println("     _  ")
-		fmt.Println("    | | ")
-		fmt.Println("  __| | ")
-		fmt.Println(" / _` | ")
-		fmt.Println("| (_| | ")
-		fmt.Println(" \\__,_| ")
-	} else if letter == "e" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println("  ___  ")
-		fmt.Println(" / _ \\ ")
-		fmt.Println("|  __/ ")
-		fmt.Println(" \\___| ")
-	} else if letter == "f" {
-		fmt.Println("  __  ")
-		fmt.Println(" / _| ")
-		fmt.Println("| |_  ")
-		fmt.Println("|  _| ")
-		fmt.Println("| |   ")
-		fmt.Println("|_|   ")
-	} else if letter == "g" {
-		fmt.Println("  __ _  ")
-		fmt.Println(" / _` | ")
-		fmt.Println("| (_| | ")
-		fmt.Println(" \\__, | ")
-		fmt.Println("  __/ | ")
-		fmt.Println(" |___/  ")
-	} else if letter == "h" {
-		fmt.Println(" _      ")
-		fmt.Println("| |     ")
-		fmt.Println("| |__   ")
-		fmt.Println("|  _ \\  ")
-		fmt.Println("| | | | ")
-		fmt.Println("|_| |_| ")
-	} else if letter == "i" {
-		fmt.Println(" _  ")
-		fmt.Println("(_) ")
-		fmt.Println(" _  ")
-		fmt.Println("| | ")
-		fmt.Println("| | ")
-		fmt.Println("|_| ")
-	} else if letter == "j" {
-		fmt.Println("   _  ")
-		fmt.Println("  (_) ")
-		fmt.Println("   _  ")
-		fmt.Println("  | | ")
-		fmt.Println("  | | ")
-		fmt.Println(" _/ | ")
-		fmt.Println("|__/  ")
-	} else if letter == "k" {
-		fmt.Println("")
-		fmt.Println(" _     ")
-		fmt.Println("| | _  ")
-		fmt.Println("| |/ / ")
-		fmt.Println("|   <  ")
-		fmt.Println("|_|\\_\\ ")
-	} else if letter == "l" {
-		fmt.Println(" _  ")
-		fmt.Println("| | ")
-		fmt.Println("| | ")
-		fmt.Println("| | ")
-		fmt.Println("| | ")
-		fmt.Println("|_| ")
-	} else if letter == "m" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println(" _ __ ___   ")
-		fmt.Println("| '_ ` _ \\  ")
-		fmt.Println("| | | | | | ")
-		fmt.Println("|_| |_| |_| ")
-	} else if letter == "n" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println(" _ __   ")
-		fmt.Println("| '_ \\  ")
-		fmt.Println("| | | | ")
-		fmt.Println("|_| |_| ")
-	} else if letter == "o" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println("  ___   ")
-		fmt.Println(" / _ \\  ")
-		fmt.Println("| (_) | ")
-		fmt.Println(" \\___/  ")
-	} else if letter == "p" {
-		fmt.Println(" _ __   ")
-		fmt.Println("| '_ \\  ")
-		fmt.Println("| |_) | ")
-		fmt.Println("| .__/  ")
-		fmt.Println("| |     ")
-		fmt.Println("|_|     ")
-	} else if letter == "q" {
-		fmt.Println("  __ _  ")
-		fmt.Println(" / _` | ")
-		fmt.Println("| (_| | ")
-		fmt.Println(" \\__, | ")
-		fmt.Println("    | | ")
-		fmt.Println("    |_| ")
-	} else if letter == "r" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println(" _ __  ")
-		fmt.Println("| '__| ")
-		fmt.Println("| |    ")
-		fmt.Println("|_|    ")
-	} else if letter == "s" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println(" ___  ")
-		fmt.Println("/ __| ")
-		fmt.Println("\\__ \\ ")
-		fmt.Println("|___/ ")
-	} else if letter == "t" {
-		fmt.Println("")
-		fmt.Println("| |   ")
-		fmt.Println("| |_  ")
-		fmt.Println("| __| ")
-		fmt.Println("\\ |_  ")
-		fmt.Println(" \\__| ")
-	} else if letter == "u" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println(" _   _  ")
-		fmt.Println("| | | | ")
-		fmt.Println("| |_| | ")
-		fmt.Println(" \\__,_| ")
-	} else if letter == "v" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println("__   __ ")
-		fmt.Println("\\ \\ / / ")
-		fmt.Println(" \\ V /  ")
-		fmt.Println("  \\_/   ")
-	} else if letter == "w" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println("__      __ ")
-		fmt.Println("\\ \\ /\\ / / ")
-		fmt.Println(" \\ V  V /  ")
-		fmt.Println("  \\_/\\_/   ")
-	} else if letter == "x" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println("__  __ ")
-		fmt.Println("\\ \\/ / ")
-		fmt.Println(" >  <  ")
-		fmt.Println("/_/\\_\\ ")
-	} else if letter == "y" {
-		fmt.Println(" _   _   ")
-		fmt.Println("| | | | ")
-		fmt.Println("| |_| | ")
-		fmt.Println(" \\__, | ")
-		fmt.Println(" __/ /  ")
-		fmt.Println("|___/   ")
-	} else if letter == "z" {
-		fmt.Println("")
-		fmt.Println("")
-		fmt.Println(" ____ ")
-		fmt.Println("|_  / ")
-		fmt.Println(" / /  ")
-		fmt.Println("/___| ")
-	}
+	tabl1 := []string{"        ","        ","       ","        ","       ","      ","        ","        ","    ","   _  ","        ","    ","            ","        ","        ","        ","        ","       ","       ","      ","        ","         ","              ","         ","        ","      "}
+	tabl2 := []string{"        "," _      ","       ","     _  ","       ","  __  ","  __ _  "," _      "," _  ","  (_) ","        "," _  ","            ","        ","        "," _ __   ","  __ _  ","       ","       "," _    ","        ","         ","              ","         "," _   _  ","      "}
+	tabl3 := []string{"        ","| |     ","       ","    | | ","       "," / _| "," / _` | ","| |     ","(_) ","   _  "," _      ","| | ","            ","        ","        ","| '_ \\ "," / _` | ","       ","       ","| |   ","        ","         ","              ","         ","| | | | ","      "}
+	tabl4 := []string{"  __ _  ","| |__   ","  ___  ","  __| | ","  ___  ","| |_  ","| (_| | ","| |__   "," _  ","  | | ","| | _   ","| | "," _ __ ___   "," _ __   ","  ___   ","| |_) | ","| (_| | "," _ __  "," ___   ","| |_  "," _   _  ","__   __  ","__      __    ","__  __   ","| |_| | "," ____ "}
+	tabl5 := []string{" / _` | ","| '_ \\ "," / __| "," / _` | "," / _ \\","|  _| "," \\__, |","|  _ \\ ","| | ","  | | ","| |/ /  ","| | ","| '_ ` _ \\ ","| '_ \\ "," / _ \\ ","| .__/  "," \\__, |","| '__| ","/ __|  ","| __| ","| | | | ","\\ \\ / /","\\ \\ /\\ / / ","\\ \\/ / "," \\__, |","|_  / "}
+	tabl6 := []string{"| (_| | ","| |_) | ","| (__  ","| (_| | ","|  __/ ","| |   ","  __/ | ","| | | | ","| | "," _/ | ","|   <   ","| | ","| | | | | | ","| | | | ","| (_) | ","| |     ","    | | ","| |    ","\\__ \\","\\ |_ ","| |_| | "," \\ V /  "," \\ V  V /    "," >  <    "," __/ /  "," / /  "}
+	tabl7 := []string{" \\__,_|","|_.__/  "," \\___|"," \\__,_|"," \\___|","|_|   "," |___/  ","|_| |_| ","|_| ","|__/  ","|_|\\_\\","|_| ","|_| |_| |_| ","|_| |_| "," \\___/ ","|_|     ","    |_| ","|_|    ","|___/  "," \\__|"," \\__,_|","  \\_/   ","  \\_/\\_/    ","/_/\\_\\ ","|___/   ","/___| "}
+	if letter == 'a' {
+
+	} else if letter == 'b' {
+
+	} else if letter == 'c' {
+
+	} else if letter == 'd' {
+
+	} else if letter == 'e' {
+
+	} else if letter == 'f' {
+
+	} else if letter == 'g' {
+
+	} else if letter == 'h' {
+
+	} else if letter == 'i' {
+
+	} else if letter == 'j' {
+
+	} else if letter == 'k' {
+
+	} else if letter == 'l' {
+
+	} else if letter == 'm' {
+
+	} else if letter == 'n' {
+
+	} else if letter == 'o' {
+
+	} else if letter == 'p' {
+
+	} else if letter == 'q' {
+
+	} else if letter == 'r' {
+
+	} else if letter == 's' {
+
+	} else if letter == 't' {
+
+	} else if letter == 'u' {
+
+	} else if letter == 'v' {
+
+	} else if letter == 'w' {
+
+	} else if letter == 'x' {
+
+	} else if letter == 'y' {
+
+	} else if letter == 'z'
+
 }
