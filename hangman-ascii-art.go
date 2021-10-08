@@ -7,10 +7,10 @@ import (
 	"bufio"
 )
 
-func Ascii_art_min(tabunderscore []rune) {
+func Ascii_art_min(tabunderscore []rune, asciiart string) {
 	var wordtab []string
 	nletter := make([]int, len(tabunderscore))
-	f, err := os.Open(os.Args[3])
+	f, err := os.Open(asciiart)
     if err != nil {
         log.Fatal(err)
     }

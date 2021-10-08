@@ -1,12 +1,11 @@
 package piscine
 
 import (
-	"os"
 	"fmt"
 )
-func LetterType(tabunderscore []rune) {
-	if len(os.Args) == 4  && os.Args[2] == "--letterFile" {
-		Ascii_art_min(tabunderscore)
+func LetterType(tabunderscore []rune, asciiart string) {
+	if asciiart != "" {
+		Ascii_art_min(tabunderscore, asciiart)
 	} else {
 		for i := 0; i < len(tabunderscore); i++ {
 			fmt.Printf(string(tabunderscore[i]))

@@ -25,8 +25,9 @@ func RandomWord() string {
 	
 }
 
-func LetterRandom(mot string) string {
+func LetterRandom(mot string, stock *[]byte) string {
 	var letter string
 	letter = string(mot[rand.Intn(len(mot))])
-	return letter
+	*stock = append(*stock, byte(letter[0]))
+	return letter 
 }
