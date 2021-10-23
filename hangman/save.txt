@@ -1,1 +1,1 @@
-{"attempts":10,"word":"cle","stock":"e","asciiart":"standard.txt"}
+{"attempts":9,"word":"ecriture","stock":"roe","asciiart":""}
