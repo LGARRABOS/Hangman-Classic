@@ -23,7 +23,7 @@ func main() {
 		word = piscine.RandomWord()
 	}
 	tabunderscore := make([]rune, len(word))
-	if len(os.Args) == 4 && os.Args[2] == "--l0" {
+	if len(os.Args) == 4 && os.Args[2] == "--letterFile" {
 		asciiart = os.Args[3]
 	}
 	if len(os.Args) == 3 && os.Args[1] == "--startWith"{
